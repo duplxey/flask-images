@@ -35,9 +35,9 @@
                                               <tr>
                                                   <td>{{ image["id"] }}</td>
                                                   <td>{{ image["title"] }}</td>
-                                                  <td><a href="{{ url_for("media", path=image["file"]) }}">{{ image["file"] }}</a></td>
+                                                  <td><a href="{{ media(image['file']) }}">{{ image["file"] }}</a></td>
                                                   <td>{{ image["uploaded_at"] }}</td>
-                                                  <td><img src="{{ url_for("media", path=image["file"]) }}" class="img-fluid" height="25" width="25" alt="Preview {{ image["id"] }}"></td>
+                                                  <td><img src="{{ media(image['file']) }}" class="img-fluid" height="25" width="25" alt="Preview {{ image["id"] }}"></td>
                                               </tr>
                                           {% endfor %}
                                        </tbody>
